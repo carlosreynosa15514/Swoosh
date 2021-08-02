@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" default="false" project-jdk-name="15" project-jdk-type="JavaSDK" />
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/app/src/main/res/drawable/swoosh_button_checked.xml" value="0.2703125" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/app/src/main/res/layout/activity_co_ed_looking.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/app/src/main/res/layout/activity_league.xml" value="0.264" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/app/src/main/res/layout/activity_person.xml" value="0.264" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="15" project-jdk-type="JavaSDK" />
 </project>

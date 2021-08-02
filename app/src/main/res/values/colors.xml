@@ -12,4 +12,6 @@
     <color name="colorPrimaryDark">#3F3F3F</color>
     <color name="colorAccent">#FFFFFF</color>
     <color name="swoosh_btn">#64000000</color>
+    <color name="swoosh_btn_checked">#592C3F</color>
+
 </resources>
