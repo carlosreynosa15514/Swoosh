@@ -25,12 +25,12 @@
         android:layout_width="100dp"
         android:layout_height="43dp"
         android:layout_marginTop="44dp"
+        android:contentDescription="@string/app_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/background_personal"
-        app:srcCompat="@drawable/swooshlogo"
-        android:contentDescription="@string/app_logo" />
+        app:srcCompat="@drawable/swooshlogo" />
 
     <TextView
         android:id="@+id/txtTitle1Person"
@@ -46,35 +46,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_personal" />
 
-    <Button
-        android:id="@+id/btnCoEdBeg"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:background="@drawable/swoosh_button_checked"
-        android:text="@string/beginner"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/btnBaller"
-        app:layout_constraintHorizontal_bias="0.052"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle1Person" />
-
-    <Button
-        android:id="@+id/btnBaller"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
-        android:background="@drawable/swoosh_button_checked"
-        android:text="@string/baller"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnCoEdBeg"
-        app:layout_constraintTop_toTopOf="@+id/btnCoEdBeg" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle1Person">
+
+        <ToggleButton
+            android:id="@+id/btnCoEdBeg"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/swoosh_toggle"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/beginner"
+            android:textColor="@color/white"
+            android:textOff="@string/beginner"
+            android:textOn="@string/beginner" />
+
+        <ToggleButton
+            android:id="@+id/btnBaller"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/swoosh_toggle"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/baller"
+            android:textColor="@color/white"
+            android:textOff="@string/baller"
+            android:textOn="@string/baller" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnFinish"
@@ -84,11 +94,12 @@
         android:layout_marginLeft="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:background="@drawable/swoosh_button_checked"
+        android:background="@color/swoosh_btn"
         android:fontFamily="@font/montserrat"
         android:text="@string/finish"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
