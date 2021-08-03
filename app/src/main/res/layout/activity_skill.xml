@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PersonActivity">
+    android:onClick="onSkillFinishClicked"
+    tools:context=".controller.SkillActivity">
 
     <ImageView
         android:id="@+id/background_personal"
@@ -67,6 +68,7 @@
             android:layout_marginLeft="8dp"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
+            android:onClick="onBeginnerClick"
             android:text="@string/beginner"
             android:textColor="@color/white"
             android:textOff="@string/beginner"
@@ -80,6 +82,7 @@
             android:layout_marginLeft="16dp"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
+            android:onClick="onBallerClick"
             android:text="@string/baller"
             android:textColor="@color/white"
             android:textOff="@string/baller"
@@ -96,6 +99,7 @@
         android:layout_marginRight="24dp"
         android:background="@color/swoosh_btn"
         android:fontFamily="@font/montserrat"
+        android:onClick="onClickedFinish"
         android:text="@string/finish"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"

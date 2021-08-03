@@ -1,10 +1,8 @@
-package cmoreno.example.swoosh
+package cmoreno.example.swoosh.controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.util.Log.DEBUG
-import cmoreno.example.swoosh.BuildConfig.DEBUG
 
 open class BaseActivity : AppCompatActivity() {
     val TAG = "LifeCycle"

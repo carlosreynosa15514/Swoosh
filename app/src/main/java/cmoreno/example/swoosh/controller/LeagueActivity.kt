@@ -1,9 +1,11 @@
-package cmoreno.example.swoosh
+package cmoreno.example.swoosh.controller
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import cmoreno.example.swoosh.EXTRA_LEAGUE
+import cmoreno.example.swoosh.R
 import kotlinx.android.synthetic.main.activity_league.*
 
 //import kotlinx.android.synthetic.main.activity_league.*
@@ -44,7 +46,7 @@ class LeagueActivity : BaseActivity() {
 
     fun leagueNextClick(view: View) {
         if (selectedLeague != "") {
-            val skillActivity = Intent(this, PersonActivity::class.java)
+            val skillActivity = Intent(this, SkillActivity::class.java)
             skillActivity.putExtra(EXTRA_LEAGUE, selectedLeague)
             startActivity(skillActivity)
         }else {
