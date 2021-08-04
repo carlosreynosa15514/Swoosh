@@ -4,7 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import cmoreno.example.swoosh.EXTRA_LEAGUE
+import cmoreno.example.swoosh.EXTRA_PLAYER
+import cmoreno.example.swoosh.Model.Player
 import cmoreno.example.swoosh.R
 import kotlinx.android.synthetic.main.activity_league.*
 
@@ -13,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_league.*
 class LeagueActivity : BaseActivity() {
 
     //Varioables
-    var selectedLeague = ""
+    var player = Player("", "")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,28 +27,28 @@ class LeagueActivity : BaseActivity() {
     fun onMensClicked(view: View) {
         btn_womens.isChecked = false
         btn_coEd.isChecked = false
-        selectedLeague = "mens"
+        player.league = "mens"
 
     } // Fin de funcion onMensClicked
 
     fun onWomensClicked(view: View) {
         btn_mens.isChecked = false
         btn_coEd.isChecked = false
-        selectedLeague = "womens"
+        player.league = "womens"
 
     } // Fin de funcion onWomensClicked
 
     fun onCoEdClicked(view: View) {
         btn_mens.isChecked = false
         btn_womens.isChecked = false
-        selectedLeague = "co-ed"
+        player.league = "co-ed"
 
     } // Fin de funcion onCoEdClicked
 
     fun leagueNextClick(view: View) {
-        if (selectedLeague != "") {
+        if (player.league != "") {
             val skillActivity = Intent(this, SkillActivity::class.java)
-            skillActivity.putExtra(EXTRA_LEAGUE, selectedLeague)
+            skillActivity.putExtra(EXTRA_PLAYER, player)
             startActivity(skillActivity)
         }else {
             // Usaremos un mensaje breve usando un TOAST

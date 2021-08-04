@@ -22,8 +22,8 @@
 
     <TextView
         android:id="@+id/searchLeagueText"
-        android:layout_width="301dp"
-        android:layout_height="59dp"
+        android:layout_width="306dp"
+        android:layout_height="67dp"
         android:layout_marginTop="240dp"
         android:fontFamily="@font/montserrat"
         android:singleLine="false"
