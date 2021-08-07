@@ -16,12 +16,25 @@ class LeagueActivity : BaseActivity() {
     //Varioables
     var player = Player("", "")
 
+    // Se crea esta funcion para proteger los datos al cambiar de lado el telefono
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState?.putParcelable(EXTRA_PLAYER, player)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_league)
-
     } // Fin de onCreate
 
+    // Aqui se reciben los datos de la instancia anterior
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if (savedInstanceState != null){
+            player = savedInstanceState.getParcelable<Player>(EXTRA_PLAYER)!!
+        }
+    }
+    
     // Para usar el onClick se debe poner su funcion afuera del OnCreate es decir hacerla publica.
 
     fun onMensClicked(view: View) {

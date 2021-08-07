@@ -25,19 +25,18 @@
         android:id="@+id/logo_league"
         android:layout_width="100dp"
         android:layout_height="43dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/app_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/background_league"
-        app:srcCompat="@drawable/swooshlogo"
-        android:contentDescription="@string/app_logo" />
+        app:srcCompat="@drawable/swooshlogo" />
 
     <TextView
         android:id="@+id/txt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/desired_league"
         android:textColor="@color/white"
@@ -58,7 +57,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_title"
-        app:layout_constraintVertical_bias="0.13999999">
+        app:layout_constraintVertical_bias="0.01999998">
 
         <ToggleButton
             android:id="@+id/btn_mens"
